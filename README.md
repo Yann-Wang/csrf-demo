@@ -8,7 +8,7 @@ cd csrf-demo/dangerous_site
 npm install
 node ./bin/www
 
-# start trusted site
+# start trusted site in virtual machine
 cd ../trusted_site
 npm install
 node ./bin/www
@@ -17,6 +17,7 @@ node ./bin/www
 
 ### test
 
+- access trusted site: http://vm:4000/  , then the cookie of this site is stored in browser.
 - access dangerous site : http://localhost:3000/csrf.html
 
 csrf.html
@@ -54,7 +55,8 @@ csrf.html
 
 ```
 
-- input something and submit
-- then go to the console of trusted site, you can find the form request.
+input something and submit, then go to the console of trusted site, you can find the form request and the cookie of trusted site.
+
 - this result indicates that we can send cross origin request by using form. 
+
 - add iframe element to not redirect.
