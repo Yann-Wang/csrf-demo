@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		iframe{
+			height:0;
+			visibility: hidden;
+		}
+	</style>
+</head>
+<body>
+	<p>form表单 发送请求没有跨域限制， 可以向任意站点发送post请求</p>
+	<!-- http://localhost:4000/users/csrf -->
+	<!-- http://vm:4000/not/exist/path -->
+	<form method="post" action="http://localhost:4000/users/csrf" enctype="application/x-www-form-urlencoded" target="iframeName">
+		<label for="cntname">name: </label>
+		<input type="text" name="name" id="cntname" />
+		
+		<input type="submit" value="upload" id="_submit" />
+	</form>
+
+	<iframe id="iframeId" name="iframeName"></iframe>
+
+	<script>
+		
+	</script>
+
+</body>
+</html>
